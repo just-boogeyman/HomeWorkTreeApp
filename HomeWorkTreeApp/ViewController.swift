@@ -8,12 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+	
+	let name = "Ярослав"
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		print("Меня зовут \(name), я создал свое первое приложение")
 	}
-
-
 }
 
