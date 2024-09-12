@@ -9,11 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 	
-	let name = "Ярослав"
-
+	private let name = "Ярослав"
+	private let surName = "Кочкин"
+	var fullName: String {
+		"\(name) \(surName)"
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		print("Меня зовут \(name), я создал свое первое приложение")
+		print(fullName)
 	}
 }
 
