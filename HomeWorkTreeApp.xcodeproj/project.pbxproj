@@ -13,6 +13,7 @@
 		040E1C8A2C91CC2400191E3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E1C882C91CC2400191E3A /* Main.storyboard */; };
 		040E1C8C2C91CC2500191E3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040E1C8B2C91CC2500191E3A /* Assets.xcassets */; };
 		040E1C8F2C91CC2500191E3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E1C8D2C91CC2500191E3A /* LaunchScreen.storyboard */; };
+		0420194D2C970A7E00E39044 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420194C2C970A7E00E39044 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		040E1C8B2C91CC2500191E3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040E1C8E2C91CC2500191E3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		040E1C902C91CC2500191E3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0420194C2C970A7E00E39044 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				040E1C822C91CC2400191E3A /* AppDelegate.swift */,
 				040E1C842C91CC2400191E3A /* SceneDelegate.swift */,
 				040E1C862C91CC2400191E3A /* ViewController.swift */,
+				0420194C2C970A7E00E39044 /* Person.swift */,
 				040E1C882C91CC2400191E3A /* Main.storyboard */,
 				040E1C8B2C91CC2500191E3A /* Assets.xcassets */,
 				040E1C8D2C91CC2500191E3A /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				040E1C872C91CC2400191E3A /* ViewController.swift in Sources */,
 				040E1C832C91CC2400191E3A /* AppDelegate.swift in Sources */,
+				0420194D2C970A7E00E39044 /* Person.swift in Sources */,
 				040E1C852C91CC2400191E3A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
