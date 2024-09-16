@@ -8,17 +8,19 @@
 import Foundation
 
 
-class Person {
+struct User {
 	
-	private let name: String
-	private let surName: String
+	let login: String
+	let password: String
+	let person: Person
+}
+
+struct Person {
+	
+	let name: String
+	let surName: String
 	
 	var fullName: String {
 		"\(name) \(surName)"
-	}
-	
-	init(name: String, surName: String) {
-		self.name = name
-		self.surName = surName
 	}
 }

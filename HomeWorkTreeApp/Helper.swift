@@ -8,14 +8,14 @@
 import Foundation
 
 class Helper {
-	private var persons: [Person] = []
+	private var users: [User] = []
 	
-	func addPerson(_ person: Person) {
-		persons.append(person)
+	func addUser(_ user: User) {
+		users.append(user)
 	}
 	
-	func getPersons() -> [Person] {
-		persons
+	func getUsers() -> [User] {
+		users
 	}
 }
 

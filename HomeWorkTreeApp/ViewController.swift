@@ -13,15 +13,26 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-//		print(person.fullName)
 		getInfoPeoples()
 	}
 	
 	private func getInfoPeoples() {
-		helper.addPerson(Person(name: "Ярослав", surName: "Кочкин"))
-		helper.addPerson(Person(name: "Иван", surName: "Иванов"))
-		for person in helper.getPersons() {
-			print("\(person.fullName)")
+		helper.addUser(
+			User(
+				login: "kochkin",
+				password: "123",
+				person: Person(
+					name: "Ярослав",
+					surName: "Кочкин")))
+		helper.addUser(
+			User(
+				login: "ivanov",
+				password: "321",
+				person: Person(
+					name: "Иван",
+					surName: "Иванов")))
+		for user in helper.getUsers() {
+			print("\(user.person.fullName)")
 		}
 	}
 }
