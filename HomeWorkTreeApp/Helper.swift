@@ -14,6 +14,11 @@ class Helper {
 		users.append(user)
 	}
 	
+	func addUsers(_ persons: [User]) {
+		users += persons // не знаю так правильно
+//		persons.forEach({users.append($0)}) или через append вернее и так и так правильно думаю
+	}
+	
 	func getUsers() -> [User] {
 		users
 	}
