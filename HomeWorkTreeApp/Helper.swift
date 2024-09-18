@@ -9,14 +9,14 @@ import Foundation
 
 class Helper {
 	private var users: [User] = []
+	var userReoisitory = UserRepository()
 	
 	func addUser(_ user: User) {
 		users.append(user)
 	}
 	
-	func addUsers(_ persons: [User]) {
-		users += persons // не знаю так правильно
-//		persons.forEach({users.append($0)}) или через append вернее и так и так правильно думаю
+	func addUsers(_ users: [User]) {
+		self.users.append(contentsOf: users)
 	}
 	
 	func getUsers() -> [User] {
