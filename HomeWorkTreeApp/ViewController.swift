@@ -27,7 +27,9 @@ class ViewController: UIViewController {
 	
 	private func getInfoPeoples() {
 		helper.addUsers(helper.userReoisitory.getUsers())
-		helper.getUsers().forEach({print($0.person.fullName)})
+		helper.getUsers().forEach{
+			print($0.person.fullName)
+		}
 	}
 	
 	private func setupView() {
@@ -39,7 +41,10 @@ class ViewController: UIViewController {
 	private func setupLable() {
 		let nameText = helper.getUsers().randomElement()?.person.name
 		nameLable.text = nameText
-		nameLable.font = .systemFont(ofSize: 25, weight: .bold)
+		nameLable.font = .systemFont(
+			ofSize: 25,
+			weight: .bold
+		)
 		nameLable.textColor = .blue
 		nameLable.textAlignment = .center
 		nameLable.layer.shadowColor = UIColor.black.cgColor
@@ -48,13 +53,19 @@ class ViewController: UIViewController {
 	}
 	
 	private func setupButton() {
-		fullNameButton.setTitle("Show FullName", for: .normal)
+		fullNameButton.setTitle(
+			"Show FullName",
+			for: .normal
+		)
 		fullNameButton.backgroundColor = .green
 		fullNameButton.layer.shadowColor = UIColor.black.cgColor
 		fullNameButton.layer.shadowRadius = 7.0
 		fullNameButton.layer.shadowOpacity = 0.7
 		
-		let shadowPats = UIBezierPath(roundedRect: fullNameButton.bounds, cornerRadius: 20) // Не получается :((
+		let shadowPats = UIBezierPath(
+			roundedRect: fullNameButton.bounds,
+			cornerRadius: 20
+		) // Не получается :((
 		fullNameButton.layer.shadowPath = shadowPats.cgPath
 	}
 	
