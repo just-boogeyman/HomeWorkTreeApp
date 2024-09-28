@@ -12,14 +12,21 @@ class ViewController: UIViewController {
 	private let helper = Helper()
 	
 	private let nameLable = UILabel()
-	private let fullNameButton = UIButton()
+	private let showNewUserButton = ShadowButton(
+		textButton: "Show New User",
+		color: .red
+	)
+	private let hideUserButton = ShadowButton(
+		textButton: "Hide User",
+		color: .green,
+		shadow: true
+	)
 	private let stackView = UIStackView()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		getInfoPeoples()
 		setupLable()
-		setupButton()
 		setupView()
 		setupStackView()
 		setupLayout()
@@ -38,6 +45,7 @@ class ViewController: UIViewController {
 		view.addSubview(stackView)
 	}
 	
+	// Думал сделать кастомный лайбл чтобы избавиться о этого метода тут, разгрузить вью, но не стал забегать вперед может это и не нужно
 	private func setupLable() {
 		let nameText = helper.getUsers().randomElement()?.person.name
 		nameLable.text = nameText
@@ -52,30 +60,14 @@ class ViewController: UIViewController {
 		nameLable.layer.shadowOpacity = 0.7
 	}
 	
-	private func setupButton() {
-		fullNameButton.setTitle(
-			"Show FullName",
-			for: .normal
-		)
-		fullNameButton.backgroundColor = .green
-		fullNameButton.layer.shadowColor = UIColor.black.cgColor
-		fullNameButton.layer.shadowRadius = 7.0
-		fullNameButton.layer.shadowOpacity = 0.7
-		
-		let shadowPats = UIBezierPath(
-			roundedRect: fullNameButton.bounds,
-			cornerRadius: 20
-		) // Не получается :((
-		fullNameButton.layer.shadowPath = shadowPats.cgPath
-	}
 	
 	private func setupStackView() {
 		stackView.axis = .vertical
-		stackView.distribution = .fill
-		stackView.alignment = .center
+		stackView.distribution = .fillEqually
+		stackView.alignment = .fill
 		stackView.spacing = 10
 		
-		[nameLable, fullNameButton]
+		[nameLable, showNewUserButton, hideUserButton]
 			.forEach{stackView.addArrangedSubview($0)}
 	}
 	
@@ -85,8 +77,8 @@ class ViewController: UIViewController {
 		NSLayoutConstraint.activate([
 			stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
 			stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-			stackView.widthAnchor.constraint(equalToConstant: 300),
-			stackView.heightAnchor.constraint(equalToConstant: 200)
+			stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
+			stackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5)
 		])
 	}
 }
