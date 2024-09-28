@@ -9,7 +9,6 @@ import Foundation
 
 class Helper {
 	private var users: [User] = []
-	var userReoisitory = UserRepository()
 	
 	func addUser(_ user: User) {
 		users.append(user)

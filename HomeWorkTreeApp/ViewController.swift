@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 	
 	private let helper = Helper()
+	private let userRepisitory = UserRepository()
 	
 	private let nameLable = UILabel()
 	private let showNewUserButton = ShadowButton(
@@ -33,7 +34,7 @@ class ViewController: UIViewController {
 	}
 	
 	private func getInfoPeoples() {
-		helper.addUsers(helper.userReoisitory.getUsers())
+		helper.addUsers(userRepisitory.getUsers())
 		helper.getUsers().forEach{
 			print($0.person.fullName)
 		}
@@ -72,7 +73,7 @@ class ViewController: UIViewController {
 	}
 	
 	private func setupLayout() {
-		stackView.translatesAutoresizingMaskIntoConstraints.toggle()
+		stackView.translatesAutoresizingMaskIntoConstraints = false
 		
 		NSLayoutConstraint.activate([
 			stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
