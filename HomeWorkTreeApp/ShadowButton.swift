@@ -26,15 +26,22 @@ class ShadowButton: UIButton {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	override func layoutSubviews() {
+		super.layoutSubviews()
+		let shadowPath = UIBezierPath(rect: bounds)
+		layer.shadowPath = shadowPath.cgPath
+	}
+	
 	private func setupButton(text: String, color: UIColor, shadow: Bool) {
 		setTitle(
 			text,
 			for: .normal
 		)
 		backgroundColor = color
-		layer.shadowColor = UIColor.black.cgColor
 		layer.cornerRadius = 20
+		
 		if shadow {
+			layer.shadowColor = UIColor.black.cgColor
 			layer.shadowRadius = 7.0
 			layer.shadowOpacity = 0.7
 		}

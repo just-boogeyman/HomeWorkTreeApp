@@ -46,7 +46,6 @@ class ViewController: UIViewController {
 		view.addSubview(stackView)
 	}
 	
-	// Думал сделать кастомный лайбл чтобы избавиться о этого метода тут, разгрузить вью, но не стал забегать вперед может это и не нужно
 	private func setupLable() {
 		let nameText = helper.getUsers().randomElement()?.person.name
 		nameLable.text = nameText
@@ -56,9 +55,6 @@ class ViewController: UIViewController {
 		)
 		nameLable.textColor = .blue
 		nameLable.textAlignment = .center
-		nameLable.layer.shadowColor = UIColor.black.cgColor
-		nameLable.layer.shadowRadius = 7.0
-		nameLable.layer.shadowOpacity = 0.7
 	}
 	
 	
