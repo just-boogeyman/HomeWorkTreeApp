@@ -33,7 +33,7 @@ class ViewController: UIViewController {
 		setupLayout()
 	}
 	
-	private func getInfoPeoples() {  // такие функции мы же в расширения не помещаем?
+	private func getInfoPeoples() {
 		helper.addUsers(userRepisitory.getUsers())
 		helper.getUsers().forEach{
 			print($0.person.fullName)
@@ -46,7 +46,7 @@ private extension ViewController {
 	func setupView() {
 		view.backgroundColor = .cyan
 		view.alpha = 0.9
-		view.addSubview(stackView) // пока что оставим так
+		view.addSubview(stackView)
 	}
 	
 	func setupLable() {

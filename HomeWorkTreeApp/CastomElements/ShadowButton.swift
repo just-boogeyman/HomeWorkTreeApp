@@ -5,14 +5,12 @@
 //  Created by Ярослав Кочкин on 28.09.2024.
 //
 
-import Foundation
 import UIKit
-
 
 
 class ShadowButton: UIButton {
 	
-	init(textButton: String, color: UIColor, shadow: Bool = false) { // расширение для первичного(родительского) инициализатора не нужно делать наверное?
+	init(textButton: String, color: UIColor, shadow: Bool = false) {
 		super.init(frame: .zero)
 		setupButton(text: textButton, color: color, shadow: shadow)
 	}

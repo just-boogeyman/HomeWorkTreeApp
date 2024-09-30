@@ -69,6 +69,7 @@
 				040E1C822C91CC2400191E3A /* AppDelegate.swift */,
 				040E1C842C91CC2400191E3A /* SceneDelegate.swift */,
 				04A1FC932CA9957A00AD2AD2 /* ViewControllers */,
+				04A1FC9C2CAAD9D700AD2AD2 /* Extensions */,
 				04A1FC992CAA1EEC00AD2AD2 /* CastomElements */,
 				04A1FC962CA9960000AD2AD2 /* Models */,
 				04A1FC942CA9958900AD2AD2 /* Services */,
@@ -116,10 +117,17 @@
 			isa = PBXGroup;
 			children = (
 				04B8016C2CA790FF00CD2DD0 /* ShadowButton.swift */,
-				04A1FC972CAA1EC000AD2AD2 /* UIStackView+View.swift */,
-				04A1FC9A2CAA217900AD2AD2 /* UIView+Extensions.swift */,
 			);
 			path = CastomElements;
+			sourceTree = "<group>";
+		};
+		04A1FC9C2CAAD9D700AD2AD2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04A1FC9A2CAA217900AD2AD2 /* UIView+Extensions.swift */,
+				04A1FC972CAA1EC000AD2AD2 /* UIStackView+View.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
