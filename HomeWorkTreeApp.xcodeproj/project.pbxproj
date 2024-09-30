@@ -15,6 +15,8 @@
 		0420194D2C970A7E00E39044 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420194C2C970A7E00E39044 /* Person.swift */; };
 		0420194F2C97242B00E39044 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420194E2C97242B00E39044 /* Helper.swift */; };
 		042019512C99AC2100E39044 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042019502C99AC2100E39044 /* UserRepository.swift */; };
+		04A1FC982CAA1EC000AD2AD2 /* UIStackView+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1FC972CAA1EC000AD2AD2 /* UIStackView+View.swift */; };
+		04A1FC9B2CAA217900AD2AD2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1FC9A2CAA217900AD2AD2 /* UIView+Extensions.swift */; };
 		04B8016D2CA790FF00CD2DD0 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8016C2CA790FF00CD2DD0 /* ShadowButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		0420194C2C970A7E00E39044 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		0420194E2C97242B00E39044 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		042019502C99AC2100E39044 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		04A1FC972CAA1EC000AD2AD2 /* UIStackView+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+View.swift"; sourceTree = "<group>"; };
+		04A1FC9A2CAA217900AD2AD2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		04B8016C2CA790FF00CD2DD0 /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,16 +68,58 @@
 			children = (
 				040E1C822C91CC2400191E3A /* AppDelegate.swift */,
 				040E1C842C91CC2400191E3A /* SceneDelegate.swift */,
-				04B8016C2CA790FF00CD2DD0 /* ShadowButton.swift */,
-				040E1C862C91CC2400191E3A /* ViewController.swift */,
-				042019502C99AC2100E39044 /* UserRepository.swift */,
-				0420194E2C97242B00E39044 /* Helper.swift */,
-				0420194C2C970A7E00E39044 /* Person.swift */,
-				040E1C8B2C91CC2500191E3A /* Assets.xcassets */,
-				040E1C8D2C91CC2500191E3A /* LaunchScreen.storyboard */,
+				04A1FC932CA9957A00AD2AD2 /* ViewControllers */,
+				04A1FC992CAA1EEC00AD2AD2 /* CastomElements */,
+				04A1FC962CA9960000AD2AD2 /* Models */,
+				04A1FC942CA9958900AD2AD2 /* Services */,
+				04A1FC952CA995A400AD2AD2 /* Resources */,
 				040E1C902C91CC2500191E3A /* Info.plist */,
 			);
 			path = HomeWorkTreeApp;
+			sourceTree = "<group>";
+		};
+		04A1FC932CA9957A00AD2AD2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				040E1C862C91CC2400191E3A /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		04A1FC942CA9958900AD2AD2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				042019502C99AC2100E39044 /* UserRepository.swift */,
+				0420194E2C97242B00E39044 /* Helper.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		04A1FC952CA995A400AD2AD2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				040E1C8B2C91CC2500191E3A /* Assets.xcassets */,
+				040E1C8D2C91CC2500191E3A /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04A1FC962CA9960000AD2AD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0420194C2C970A7E00E39044 /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04A1FC992CAA1EEC00AD2AD2 /* CastomElements */ = {
+			isa = PBXGroup;
+			children = (
+				04B8016C2CA790FF00CD2DD0 /* ShadowButton.swift */,
+				04A1FC972CAA1EC000AD2AD2 /* UIStackView+View.swift */,
+				04A1FC9A2CAA217900AD2AD2 /* UIView+Extensions.swift */,
+			);
+			path = CastomElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +195,11 @@
 				040E1C872C91CC2400191E3A /* ViewController.swift in Sources */,
 				040E1C832C91CC2400191E3A /* AppDelegate.swift in Sources */,
 				042019512C99AC2100E39044 /* UserRepository.swift in Sources */,
+				04A1FC9B2CAA217900AD2AD2 /* UIView+Extensions.swift in Sources */,
 				0420194F2C97242B00E39044 /* Helper.swift in Sources */,
 				0420194D2C970A7E00E39044 /* Person.swift in Sources */,
 				04B8016D2CA790FF00CD2DD0 /* ShadowButton.swift in Sources */,
+				04A1FC982CAA1EC000AD2AD2 /* UIStackView+View.swift in Sources */,
 				040E1C852C91CC2400191E3A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,7 @@ import UIKit
 
 class ShadowButton: UIButton {
 	
-	init(textButton: String, color: UIColor, shadow: Bool = false) {
+	init(textButton: String, color: UIColor, shadow: Bool = false) { // расширение для первичного(родительского) инициализатора не нужно делать наверное?
 		super.init(frame: .zero)
 		setupButton(text: textButton, color: color, shadow: shadow)
 	}
@@ -31,7 +31,10 @@ class ShadowButton: UIButton {
 		let shadowPath = UIBezierPath(rect: bounds)
 		layer.shadowPath = shadowPath.cgPath
 	}
-	
+}
+
+// MARK: - SetupButton
+extension ShadowButton {
 	private func setupButton(text: String, color: UIColor, shadow: Bool) {
 		setTitle(
 			text,

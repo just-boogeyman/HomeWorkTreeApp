@@ -33,20 +33,23 @@ class ViewController: UIViewController {
 		setupLayout()
 	}
 	
-	private func getInfoPeoples() {
+	private func getInfoPeoples() {  // такие функции мы же в расширения не помещаем?
 		helper.addUsers(userRepisitory.getUsers())
 		helper.getUsers().forEach{
 			print($0.person.fullName)
 		}
 	}
-	
-	private func setupView() {
+}
+
+// MARK: - Setup View
+private extension ViewController {
+	func setupView() {
 		view.backgroundColor = .cyan
 		view.alpha = 0.9
-		view.addSubview(stackView)
+		view.addSubview(stackView) // пока что оставим так
 	}
 	
-	private func setupLable() {
+	func setupLable() {
 		let nameText = helper.getUsers().randomElement()?.person.name
 		nameLable.text = nameText
 		nameLable.font = .systemFont(
@@ -57,17 +60,18 @@ class ViewController: UIViewController {
 		nameLable.textAlignment = .center
 	}
 	
-	
-	private func setupStackView() {
+	func setupStackView() {
 		stackView.axis = .vertical
 		stackView.distribution = .fillEqually
 		stackView.alignment = .fill
 		stackView.spacing = 10
 		
-		[nameLable, showNewUserButton, hideUserButton]
-			.forEach{stackView.addArrangedSubview($0)}
+		stackView.addArrangedSubviews(nameLable, showNewUserButton, hideUserButton)
 	}
-	
+}
+
+// MARK: - Setup Layout
+extension ViewController {
 	private func setupLayout() {
 		stackView.translatesAutoresizingMaskIntoConstraints = false
 		
@@ -79,4 +83,3 @@ class ViewController: UIViewController {
 		])
 	}
 }
-
