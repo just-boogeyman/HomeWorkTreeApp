@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 	
 	private let helper = Helper()
-	private let userRepisitory = UserRepository()
+	private let userRepository = UserRepository()
 	
 	private let nameLable = UILabel()
 	private let showNewUserButton = ShadowButton(
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
 	}
 	
 	private func getInfoPeoples() {
-		helper.addUsers(userRepisitory.getUsers())
+		helper.addUsers(userRepository.getUsers())
 		helper.getUsers().forEach{
 			print($0.person.fullName)
 		}
