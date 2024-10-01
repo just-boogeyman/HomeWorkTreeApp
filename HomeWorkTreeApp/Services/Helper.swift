@@ -21,5 +21,16 @@ class Helper {
 	func getUsers() -> [User] {
 		users
 	}
+	
+	func randomUser() -> User { // думаю лучше у хелпера спрашивать рандомгого юзера чем прописывать во вью контроллере
+		users.randomElement()
+		?? User(
+			login: "312",
+			password: "321",
+			person: Person(
+				name: "Секретик",
+				surName: "Секретный")
+		)
+	}
 }
 

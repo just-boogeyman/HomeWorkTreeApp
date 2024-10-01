@@ -30,6 +30,7 @@ class ViewController: UIViewController {
 		setupLable()
 		setupView()
 		setupStackView()
+		addAction()
 		setupLayout()
 	}
 	
@@ -39,10 +40,27 @@ class ViewController: UIViewController {
 			print($0.person.fullName)
 		}
 	}
+	
+	@objc
+	private func showNewUserButtonTupped() {
+		nameLable.text = helper.randomUser().person.name
+	}
 }
 
 // MARK: - Setup View
 private extension ViewController {
+	func addAction() {
+		showNewUserButton.addTarget(
+			self,
+			action: #selector(showNewUserButtonTupped),
+			for: .touchUpInside)
+		
+		let action = UIAction { _ in
+			self.nameLable.text = ""
+		}
+		hideUserButton.addAction(action, for: .touchUpInside)
+	}
+	
 	func setupView() {
 		view.backgroundColor = .cyan
 		view.alpha = 0.9
@@ -50,7 +68,7 @@ private extension ViewController {
 	}
 	
 	func setupLable() {
-		let nameText = helper.getUsers().randomElement()?.person.name
+		let nameText = helper.randomUser().person.name
 		nameLable.text = nameText
 		nameLable.font = .systemFont(
 			ofSize: 25,
@@ -62,11 +80,13 @@ private extension ViewController {
 	
 	func setupStackView() {
 		stackView.axis = .vertical
-		stackView.distribution = .fillEqually
+		stackView.distribution = .equalSpacing
 		stackView.alignment = .fill
 		stackView.spacing = 10
 		
-		stackView.addArrangedSubviews(nameLable, showNewUserButton, hideUserButton)
+		stackView.addArrangedSubviews(
+			nameLable, showNewUserButton, hideUserButton
+		)
 	}
 }
 
@@ -76,10 +96,17 @@ extension ViewController {
 		stackView.translatesAutoresizingMaskIntoConstraints = false
 		
 		NSLayoutConstraint.activate([
-			stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-			stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-			stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
-			stackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5)
+			stackView.topAnchor.constraint(
+				equalTo: view.topAnchor,
+				constant: 100
+			),
+			stackView.centerXAnchor.constraint(
+				equalTo: view.centerXAnchor
+			),
+			stackView.widthAnchor.constraint(
+				equalTo: view.widthAnchor,
+				multiplier: 0.7
+			)
 		])
 	}
 }

@@ -39,12 +39,22 @@ extension ShadowButton {
 			for: .normal
 		)
 		backgroundColor = color
-		layer.cornerRadius = 20
+		layer.cornerRadius = Constant.cornerRadius
+		heightAnchor.constraint(equalToConstant: 50).isActive = true
 		
 		if shadow {
-			layer.shadowColor = UIColor.black.cgColor
-			layer.shadowRadius = 7.0
-			layer.shadowOpacity = 0.7
+			layer.shadowColor = Constant.shadowColor
+			layer.shadowRadius = Constant.shadowRadius
+			layer.shadowOpacity = Constant.shadowOpacity
 		}
+	}
+}
+
+private extension ShadowButton {
+	enum Constant {
+		static let cornerRadius: CGFloat = 20
+		static let shadowColor: CGColor = UIColor.black.cgColor
+		static let shadowRadius: CGFloat = 7
+		static let shadowOpacity: Float = 0.7
 	}
 }
